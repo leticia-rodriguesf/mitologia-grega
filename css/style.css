@@ -1,0 +1,212 @@
+
+/*
+font-family: 'Della Respira', serif;
+font-family: 'Lato', sans-serif;
+*/
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /*Esconder a barra*/
+    font-family: 'Lato', sans-serif;
+    list-style: none;
+    box-sizing: border-box;
+    background: #101010;
+}
+
+nav{
+    z-index: 100;
+    height: 8vh;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.logo{
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    padding-top: 20px;
+}
+
+
+section{
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bg img{
+    width: 110vw;
+    height: 110vh;
+    filter: brightness(0.4);
+}
+
+.text h1{
+    font-family: 'Della Respira', serif !important;
+    font-size: 3vw;
+    color: #fff;
+    letter-spacing: 20px;
+    position: absolute;
+    text-align: center;
+    top: 34vh;
+    left: 10vw;
+    width: 400px;
+}
+
+.zeus img{
+    width: 900px;
+    height: 600px;
+    position: absolute;
+    left: 34vw;
+    top: 5vh;
+    z-index:1;
+    filter: brightness(0.7);
+}
+
+.clouds{
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    top: 285px;
+    width: 100%;
+    height: 55%;
+}
+
+section .clouds img{
+    position: absolute;
+    bottom: 0;
+    max-width: 100%;
+    animation: animate calc(10s * var(--i)) linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        transform: translateX(-90%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+
+#sectiontwo{
+    width: 100%;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 45px;
+}
+
+.box{
+    width: 350px;
+    height: 490px;
+    background-color: #1e1e26;
+    border-radius: 10px;
+    box-shadow: 2px 10px 12px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box ;
+    margin: 20px 10px;
+}
+
+.model{
+    margin-top: 10px;
+    height: 250px;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+}
+
+.details p{
+    font-family: 'Lato', sans-serif;
+     font-weight: bold;
+     color: #6a6a74;
+     margin-top: 0px;
+}
+
+.deuses{
+    color: #504e4e3e;
+    font-weight: bold;
+    letter-spacing: 20px;
+    font-family: 'Della Respira', serif;
+    font-size: 20px;
+}
+
+.details h3{
+    color: #fff;
+    font-family: 'Della Respira', serif;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.box:hover{
+    background-color: #1717171d;
+    transform-style: preserve-3d;
+    transform: scale(1.02);
+    transition: all ease 0.3s;
+}
+
+.box:hover .deuses{
+    color: #1023cf;
+    transition: all ease 0.3s;
+}
+
+
+
+/*Responsividade*/
+@media(max-width:720px){
+	.box{
+		width: 94%;
+		height: 500px;
+	}
+	.model{
+		height:250px;
+	}
+	.details p{
+		font-size: 16px;
+		width: 250px;
+	}
+    .zeus img{
+        width: 500px;
+        height: 400px;
+        position: absolute;
+        left: 3vw;
+        top: 50vh;
+        z-index:1;
+        filter: brightness(0.7);
+    }
+    
+    .clouds{
+        visibility: hidden;
+    }
+}
+@media(max-width:1024px){
+
+    .zeus img{
+        width: 1024px;
+        height: 900px;
+        position: absolute;
+        left: 3vw;
+        top: 50vh;
+        z-index:1;
+        filter: brightness(0.7);
+    }
+
+    .clouds{
+        top: 610px;
+    }
+}
